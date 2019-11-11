@@ -7,7 +7,7 @@ export AWS_BUCKET_KEY="${AWS_BUCKET_KEY%\"}"
 export AWS_BUCKET_KEY="${AWS_BUCKET_KEY#\"}"
 export CONFIG_TAR_PATH="$JENKINS_HOME/$AWS_BUCKET_KEY"
 # export CONFIG_FOLDER_PATH="$JENKINS_HOME/$AWS_BUCKET_KEY" ## For when the key is the same as the folder that it was created in
-export CONFIG_FOLDER_PATH="$JENKINS_HOME/config.bak"
+export CONFIG_FOLDER_PATH="$JENKINS_HOME/$AWS_BUCKET_KEY"
 
 ## Get tarball from S3 ##
 echo "INFO: Getting Config Tarball"
