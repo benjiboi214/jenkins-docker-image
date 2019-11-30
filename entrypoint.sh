@@ -6,7 +6,6 @@ export AWS_BUCKET_KEY=`aws s3api list-objects --bucket "systemiphus-jenkins-conf
 export AWS_BUCKET_KEY="${AWS_BUCKET_KEY%\"}"
 export AWS_BUCKET_KEY="${AWS_BUCKET_KEY#\"}"
 export AWS_BUCKET_KEY_NO_EXT="${AWS_BUCKET_KEY%.tar.gz}"
-echo "NO EXT KEY: $AWS_BUCKET_KEY_NO_EXT"
 export CONFIG_TAR_PATH="$JENKINS_HOME/$AWS_BUCKET_KEY"
 # export CONFIG_FOLDER_PATH="$JENKINS_HOME/$AWS_BUCKET_KEY" ## For when the key is the same as the folder that it was created in
 export CONFIG_FOLDER_PATH="$JENKINS_HOME/$AWS_BUCKET_KEY_NO_EXT"
